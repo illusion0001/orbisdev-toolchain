@@ -30,4 +30,4 @@ cd build || exit 1
 make --quiet -j $PROC_NR clean   || { exit 1; }
 make --quiet -j $PROC_NR || { exit 1; }
 make --quiet -j $PROC_NR install || { exit 1; }
-make --quiet -j $PROC_NR clean   || { exit 1; }
+# make --quiet -j $PROC_NR clean   || { exit 1; }
