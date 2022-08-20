@@ -8,8 +8,10 @@ REPO_URL="https://github.com/bminor/binutils-gdb"
 REPO_FOLDER="binutils-gdb"
 BRANCH_NAME="binutils-2_38"
 if test ! -d "$REPO_FOLDER"; then
+	echo "IF 1"
 	git clone --depth 1 -b $BRANCH_NAME $REPO_URL && cd $REPO_FOLDER || exit 1
 else
+	echo "IF ELSE"
 	cd $REPO_FOLDER && git fetch origin && git reset --hard origin/${BRANCH_NAME} || exit 1
 fi	
 	
